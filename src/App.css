@@ -1,0 +1,94 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-create {
+  width: 500px;
+}
+
+.task-uptade {
+  width: 100%;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-label {
+  margin-block: 1rem;
+}
+
+.task-input,
+.task-textarea {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.task-button {
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(0, 83, 0);
+  }
+}
+
+.update-buton {
+  background-color: chocolate!important;
+  border: 0!important;
+  &:hover {
+    background-color: rgb(134, 56, 1)!important;
+  }
+}
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem
+}
+
+.task-details {
+  border: 1px solid green;
+  border-radius: 1rem;
+  width: 250px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: .5rem;
+  font-size: 1.2rem;
+  width: 100px;
+  border: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.task-delete {
+  background-color: red;
+  color: white;
+}
+.task-update {
+  background-color: green;
+  color: white;
+}
