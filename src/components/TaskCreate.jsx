@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
+import TaskContext from "../context/task";
 
-function TaskCreate({onCreate, task, taskformUpdate, onUpdate}) {
+function TaskCreate({ task, taskformUpdate, onUpdate}) {
+
+  const { createTask } = useContext(TaskContext)
 
   const [title, setTitle] = useState(task ? task.title : '') /* Guncelleme istendiginde veri var ise goster yoksa bos string */
   const [taskDesc, setTaskDesc] = useState(task ? task.taskDesc : '')
@@ -19,7 +22,7 @@ function TaskCreate({onCreate, task, taskformUpdate, onUpdate}) {
     if(taskformUpdate) {
       onUpdate(task.id, title, taskDesc)
     } else {
-      onCreate(title, taskDesc)
+      createTask(title, taskDesc)
     }
     setTitle('') /* submitten sonra input bosalt */
     setTaskDesc('')/* submitten sonra textarea bosalt */

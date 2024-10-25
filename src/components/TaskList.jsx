@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import TaskShow from './TaskShow'
+import TaskContext from '../context/task'
 
-function TaskList({tasks, onDelete, onUpdate}) {
+
+function TaskList() {
+
+  const { tasks } = useContext(TaskContext)
+
   return (
     <div className='task-list'>
       {/*taskc variabledan gelen veriyi map metoduyla liste icinde donuyoruz */}
       {tasks.map((task, index) => {
         return (
-          <TaskShow key={index} task={task} onDelete={onDelete} onUpdate={onUpdate}/>
+          <TaskShow key={index} task={task}/>
         )
       })}
     </div>
